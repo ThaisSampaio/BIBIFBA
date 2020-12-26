@@ -60,10 +60,10 @@ public class LivrosController {
 		return "Livros/registration-form";
 	}
 	
-	@PostMapping("Livros/save")
+	@PostMapping("/Livros/save")
 	public String save(@ModelAttribute Livros l) 
 	{
-		l.setRegistration(new Date());
+		l.setCadastro(new Date());
 		service.save(l);
 		return "redirect:/Livros/list";
 	}
